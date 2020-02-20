@@ -55,6 +55,25 @@ public class TennisGame2 implements TennisGame
         }
 		return score;
 	}
+	
+	private String getLiteral(int score) {
+		String result="";
+		switch(score) {
+		  case 0:
+			result = "Love";
+		    break;
+		  case 1:
+			result = "Fifteen";
+		    break;
+		  case 3:
+			result = "Thirty";
+			break;
+		  case 4:
+			result = "Forty";
+			break;  
+		}
+		return result;
+	}
 
 	private String normal3(String score) {
 		if (P2point>P1point && P2point < 4)
