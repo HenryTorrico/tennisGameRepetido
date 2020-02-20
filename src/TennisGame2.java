@@ -65,10 +65,10 @@ public class TennisGame2 implements TennisGame
 		  case 1:
 			result = "Fifteen";
 		    break;
-		  case 3:
+		  case 2:
 			result = "Thirty";
 			break;
-		  case 4:
+		  case 3:
 			result = "Forty";
 			break;  
 		}
@@ -148,12 +148,7 @@ public class TennisGame2 implements TennisGame
 	private String tie(String score) {
 		if (P1point == P2point && P1point < 4)
         {
-            if (P1point==0)
-                score = "Love";
-            if (P1point==1)
-                score = "Fifteen";
-            if (P1point==2)
-                score = "Thirty";
+            score = getLiteral(P1point);
             score += "-All";
         }
 		return score;
